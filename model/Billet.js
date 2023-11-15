@@ -4,7 +4,7 @@ const { Schema, model } = mongoose;
 const billetSchema = new Schema(
   {
     id: {
-      type: String,
+      type: Number,
       required: true,
     },
     distance: {
@@ -30,5 +30,5 @@ const billetSchema = new Schema(
   }
 );
 
-const Billet = model("Billet", billetSchema);
+const Billet = mongoose.model("Billet", billetSchema);
 export { Billet };

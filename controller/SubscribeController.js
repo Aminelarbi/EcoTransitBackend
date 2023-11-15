@@ -2,6 +2,7 @@ import { Subscribe } from "../model/Subscribe.js";
 
 export default {
   createSubscribe: async (req, res) => {
+    console.log(req.body.imageName)
     try {
       const {
         id,
@@ -12,12 +13,11 @@ export default {
         imageName,
       } = req.body;
 
-      const subscribe = await Subscribe.create({
-        id: id,
+      const subscribe = new Subscribe({
         name: name,
-        price: price,
-        startDate: startDate,
-        endDate: endDate,
+        price: Number(price),
+        startDate: new Date(startDate),
+        endDate: new Date(endDate),
         imageName: imageName,
       });
 

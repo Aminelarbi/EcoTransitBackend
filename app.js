@@ -26,7 +26,6 @@ const port = process.env.SERVERPORT;
 app.use(morgan("dev"));
 
 app.use(cors(corsOptions));
-connectDb();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));

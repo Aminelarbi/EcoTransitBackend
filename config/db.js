@@ -4,18 +4,18 @@ dotenv.config();
 
 const databaseName = process.env.DBNAME;
 const databaseURL = process.env.DBURL;
-mongoose.set("debug", true);
-mongoose.Promise = global.Promise;
+console.log("HERE")
+mongoose.connect(`${databaseURL}`,{
+    useNewUrlParser : true,
+    useUnifiedTopology : true
+})
 
-const connectDb = () => {
-  mongoose
-    .connect(`mongodb://${databaseURL}/${databaseName}`)
-    .then(() => {
-      console.log("Connected to database");
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-};
+const db = mongoose.connection;
 
-export default connectDb;
+db.on('error', console.error.bind(console,"MongoDB connection error:"));
+
+db.once('open', () => {
+    console.log('Connected to MongoDB')
+})
+
+export default db;
