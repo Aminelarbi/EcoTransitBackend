@@ -17,7 +17,7 @@ export default {
         price: Number(price),
         startDate: new Date(startDate),
         endDate: new Date(endDate),
-        imageName: imageName,
+        imageName: `${req.protocol}://${req.get("host")}${process.env.IMGURL}/${req.file.filename}`
       });
 
       await subscribe.save();
