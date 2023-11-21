@@ -5,14 +5,13 @@ export default {
     console.log(req.body.imageName)
     try {
       const {
-        id,
         name,
         price,
         startDate,
         endDate,
         imageName,
       } = req.body;
-
+      console.log(endDate)
       const subscribe = new Subscribe({
         name: name,
         price: Number(price),

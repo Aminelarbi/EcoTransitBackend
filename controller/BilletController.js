@@ -4,7 +4,6 @@ export default {
   createBillet: async (req, res) => {
     try {
       const {
-        id,
         distance,
         estimatedPrice,
         estimatedTime,
@@ -12,7 +11,6 @@ export default {
       } = req.body;
 
       const billet = await Billet.create({
-        id: id,
         distance: distance,
         estimatedPrice: estimatedPrice,
         estimatedTime: estimatedTime,

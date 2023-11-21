@@ -3,10 +3,7 @@ const { Schema, model } = mongoose;
 
 const billetSchema = new Schema(
   {
-    id: {
-      type: Number,
-      required: true,
-    },
+
     distance: {
       type: Number,
       required: true,
@@ -21,7 +18,7 @@ const billetSchema = new Schema(
     },
     serviceType: {
       type: String,
-      enum: ["taxi", "bus", "moto", "other"], 
+      enum: ["Taxi", "Bus", "moto", "other"], 
       required: true,
     },
   },

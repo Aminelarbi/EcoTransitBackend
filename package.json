@@ -36,6 +36,7 @@
     "express-swagger-generator": "^1.1.17",
     "morgan": "^1.10.0",
     "nodemon": "^3.0.1",
-    "swagger-autogen": "^2.23.7"
+    "swagger-autogen": "^2.23.7",
+    "stripe": "14.4.0"
   }
 }
