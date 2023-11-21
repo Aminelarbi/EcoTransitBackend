@@ -16,9 +16,8 @@ const billetSchema = new Schema(
       type: String,
       required: true,
     },
-    serviceType: {
+    imageName: {
       type: String,
-      enum: ["Taxi", "Bus", "moto", "other"], 
       required: true,
     },
   },

@@ -11,7 +11,7 @@ router.get("/subscribes", subscribeController.fetchAllSubscribes);
 router.delete("/subscribe/:id", subscribeController.deleteSubscribe);
 
 // Billet
-router.post('/billet/add', billetController.createBillet);
+router.post('/billet/add',singleImage, billetController.createBillet);
 router.get("/billet/:id", billetController.fetchBillet);
 router.get("/billets", billetController.fetchAllBillets);
 router.delete("/billet/:id", billetController.deleteBillet);

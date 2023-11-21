@@ -22,4 +22,5 @@ export const singleImage = multer({
       }
       cb(undefined, true);
     },
-  }).single("imageName");
+  }).single("imageName",);
+  

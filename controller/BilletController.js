@@ -7,14 +7,14 @@ export default {
         distance,
         estimatedPrice,
         estimatedTime,
-        serviceType,
+        imageName,
       } = req.body;
 
       const billet = await Billet.create({
         distance: distance,
         estimatedPrice: estimatedPrice,
         estimatedTime: estimatedTime,
-        serviceType: serviceType,
+        imageName: `${req.protocol}://${req.get("host")}${process.env.IMGURL}/${req.file.filename}`
       });
 
       await billet.save();
