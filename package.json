@@ -30,7 +30,8 @@
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.0",
     "uuid": "^9.0.1",
-    "validator": "^13.11.0"
+    "validator": "^13.11.0",
+     "stripe" : "^14.4.0"
   },
   "devDependencies": {
     "express-swagger-generator": "^1.1.17",
