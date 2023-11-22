@@ -1,4 +1,4 @@
-import { Subscribe } from "../model/Subscribe.js";
+import { Subscribe } from "../models/Subscribe.js";
 
 export default {
   createSubscribe: async (req, res) => {

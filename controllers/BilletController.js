@@ -1,4 +1,4 @@
-import { Billet } from "../model/Billet.js";
+import { Billet } from "../models/Billet.js";
 
 export default {
   createBillet: async (req, res) => {

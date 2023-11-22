@@ -1,7 +1,7 @@
 import express from "express";
-import subscribeController from "../controller/SubscribeController.js";
-import billetController from "../controller/BilletController.js";
-import { singleImage } from "../Midlleware/multer-config.js";
+import subscribeController from "../controllers/SubscribeController.js";
+import billetController from "../controllers/BilletController.js";
+import { singleImage } from "../Midllewares/multer-config.js";
 const router = express.Router();
 
 // Subscribe
